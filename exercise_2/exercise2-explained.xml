@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="exercise2" company="testwarez2016" project="workshops">
+    <test name="hide-dynamic-elements">
+        <collect>
+            <open/>
+            <wait-for-page-loaded/>
+            <hide xpath="//*[@id='about-anim']" /> <!-- hide dynamic elements after the page is loaded so that they don't cause false-negative results -->
+            <hide xpath="//*[@id='twitter-widget-0']"/>
+            <resolution width="1200" height="800"/> <!-- you may capture several screenshot during test of an url -->
+            <sleep duration="1000"/>
+            <screen name="desktop"/> <!-- remember to name each one unique within test, e.g. this on takes screenshot after setting resolution to 1200x800 px which is about standard `desktop` screen size -->
+            <resolution width="768" height="1024"/> <!-- after capturing screenshot resolution may be changed to another one -->
+            <sleep duration="1000"/>
+            <screen name="tablet"/> <!-- since resolution now is 738x1024 px let's name this capture `tablet` -->
+            <resolution width="320" height="568"/> <!-- after capturing screenshot resolution may be changed to another one -->
+            <sleep duration="1000"/>
+            <screen name="mobile"/> <!-- since resolution now is 320x568 px let's name this capture `mobile` -->
+        </collect>
+        <compare>
+            <screen comparator="layout"/> <!-- you don't need to call screen comparison separately for each captured screenshot - this one will take of all collected screenshots -->
+        </compare>
+        <urls>
+            <url href="/about.html"/>
+        </urls>
+    </test>
+    <test name="wait-for-dynamic-element">
+        <collect>
+            <open/>
+            <!-- waiting for page is not enough, because after DOM is loaded, some dynamic actions are still in process -->
+            <!-- there must be another way to make the test wait for those elements... -->
+            <sleep duration="6000"/> <!-- there is, set sleep duration long enough for all dynamic components to load -->
+            <resolution width="1200" height="800"/>
+            <sleep duration="1000"/>
+            <screen name="desktop"/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+        </compare>
+        <urls>
+            <url href="/contact.html"/>
+        </urls>
+    </test>
+</suite>

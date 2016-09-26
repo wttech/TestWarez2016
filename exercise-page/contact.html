@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+    <title>AET on TestWarez2016</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/jumbotron.css" rel="stylesheet">
+    <style type="text/css">
+        .img-container {
+            position: relative;
+        }
+
+        .penguinImg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: none;
+        }
+
+        .loaderImg {
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            z-index: 3;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-static-top bg-inverse" id="cookieDisclaimer">
+    <div style="text-align: center;">
+        <p>This is a simple cookie disclaimer that we don't want to be here.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button" id="cookieClose">Close</a></p>
+    </div>
+</nav>
+
+<nav class="navbar navbar-static-top navbar-dark bg-inverse">
+    <a class="navbar-brand" href="#">Demo page TestWarez 2016</a>
+    <ul class="nav navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="display-3">Hello, world!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet lacus ut lacus faucibus
+                    lobortis et id odio. Ut et ante finibus neque tristique venenatis. Praesent justo eros, pretium nec
+                    efficitur sit amet, sollicitudin vitae est. Nunc rutrum arcu velit, ac viverra odio dignissim id.
+                    Donec eu massa ligula. Etiam mollis leo quam. Praesent lobortis accumsan est in pulvinar. Curabitur
+                    lectus risus, porta vel lorem et, accumsan blandit dolor. Donec ullamcorper mi vitae malesuada
+                    suscipit. Morbi sed facilisis leo.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+            </div>
+            <div class="col-md-4">
+                <div class="img-container">
+                    <img src="assets/loader.gif" alt="loader" class="loaderImg"/>
+                    <img src="assets/penguin-evil.png" alt="fade-in-img" class="penguinImg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Heading A</h2>
+            <p>Quisque purus lectus, suscipit nec efficitur vitae, egestas ut velit. Mauris efficitur feugiat turpis, ac
+                accumsan tellus tempus at. Duis a dolor ante. Sed purus orci, convallis a sagittis quis, condimentum non
+                lorem.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading B</h2>
+            <p>Phasellus ut efficitur sem. In maximus neque nec metus vestibulum pellentesque. Integer id nunc felis.
+                Sed in bibendum ex. Praesent massa nunc, fermentum vitae tincidunt nec, euismod ut nulla. In eget dui
+                sit amet metus fermentum volutpat ac eu odio.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Heading C</h2>
+            <p>In dapibus, neque sed luctus ornare, est tellus mollis diam, sed auctor leo quam id magna. Donec
+                consequat posuere orci sit amet blandit. Quisque quis nisl feugiat ligula rutrum efficitur eu nec
+                neque.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>© AET 2016</p>
+    </footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript ================================================= -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jquery.cookie-1.4.1.min.js"></script>
+<script src="assets/tether.min.js"></script>
+<script src="assets/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+    $(function () {
+        var duration = Math.floor(Math.random() * 3000) + 500;
+        setTimeout(function () {
+            $('.loaderImg').fadeOut('fast')
+        }, duration);
+        $('.penguinImg').fadeIn(duration);
+        if ($.cookie('hideCookieDisclaimer')) {
+            $('#cookieDisclaimer').hide();
+        }
+
+        $.cookie('lastVisit', 1473747545);
+        $.cookie('authenticated', false);
+        $.cookie('fromGoogleSearch', false);
+        $.cookie('analyticsID', 9486054);
+    });
+
+    $('#cookieClose').click(function () {
+        $('#cookieDisclaimer').fadeOut('fast');
+        $.cookie('hideCookieDisclaimer', true);
+    });
+
+
+
+</script>
+
+</body>
+</html>

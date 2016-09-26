@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="suite-template" company="cognifide" project="workshops">
+    <test name="my-first-test">
+        <collect>
+            <open/>
+            <wait-for-page-loaded/>
+            <resolution width="1200" height="800"/>
+            <sleep duration="2000"/>
+            <screen name="desktop"/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+        </compare>
+        <urls>
+            <url href="https://www.google.pl/"/>
+            <url href="http://www.bbc.co.uk/"/>
+            <url href="https://www.yahoo.com/"/>
+            <url href="https://github.com/Cognifide/aet"/>
+        </urls>
+    </test>
+    <test name="my-second-test">
+        <collect>
+            <open/>
+            <sleep duration="2000"/>
+            <source/>
+        </collect>
+        <compare>
+            <source/>
+            <source comparator="w3c-html5"/>
+        </compare>
+        <urls>
+            <url href="https://www.google.pl/"/>
+            <url href="http://www.bbc.co.uk/"/>
+            <url href="https://www.yahoo.com/"/>
+            <url href="https://github.com/Cognifide/aet"/>
+        </urls>
+    </test>
+</suite>

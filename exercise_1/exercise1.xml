@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="exercise1" company="testwarez2016" project="workshops">
+  <test name="homepage">
+        <collect>
+            <!-- ### add collectors and modifiers here -->
+        </collect>
+        <compare>
+            <!-- ### add comparators and data filters here -->
+        </compare>
+        <urls>
+            <url href="/index.html"/>
+        </urls>
+    </test>
+</suite>

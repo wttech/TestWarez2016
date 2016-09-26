@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="exercise3" company="testwarez2016" project="workshops">
+    <test name="close-cookie-disclaimer">
+        <collect>
+            <!-- to hide cookie disclaimer that will not show, when `hideCookieDisclaimer` cookie is set to `true`, add a cookie before opening the page -->
+            <modify-cookie action="add" cookie-name="hideCookieDisclaimer" cookie-value="true"/>
+            <open/>
+            <wait-for-page-loaded/>
+            <resolution width="1200" height="800"/>
+            <sleep duration="2000"/>
+            <screen name="desktop"/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+        </compare>
+        <urls>
+            <url href="/contact.html"/>
+        </urls>
+    </test>
+    <test name="test-hidden-content">
+        <collect>
+            <open/>
+            <wait-for-page-loaded/>
+            <!-- simulate click action to show hidden content -->
+            <click xpath="//*[@id='learnMore']" timeout="3000"/>
+            <resolution width="1200" height="800"/>
+            <sleep duration="2000"/>
+            <screen name="desktop"/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+        </compare>
+        <urls>
+            <url href="/index.html"/>
+        </urls>
+    </test>
+</suite>

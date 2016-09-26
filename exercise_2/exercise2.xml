@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="exercise2" company="testwarez2016" project="workshops">
+    <test name="hide-dynamic-elements">
+        <collect>
+            <open/>
+            <wait-for-page-loaded/>
+            <resolution width="1200" height="800"/>
+            <sleep duration="2000"/>
+            <screen name="desktop"/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+        </compare>
+        <urls>
+            <url href="/about.html"/>
+        </urls>
+    </test>
+    <test name="wait-for-dynamic-element">
+        <collect>
+            <open/>
+            <wait-for-page-loaded/>
+            <resolution width="1200" height="800"/>
+            <sleep duration="1000"/>
+            <screen name="desktop"/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+        </compare>
+        <urls>
+            <url href="/contact.html"/>
+        </urls>
+    </test>
+</suite>

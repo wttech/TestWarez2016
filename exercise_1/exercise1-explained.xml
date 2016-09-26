@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- this is AET suite definition, there are 3 very important parameters that are together an unique ID of suite -->
+<!-- `name` is the name of a suite, good practice is to make it descriptive of the function of a suite -->
+<!-- `company` is usually the name of a company that tests are performed for, this value is used to identify database for the suite -->
+<!-- `project` is usually the name of a project inside the company, this value is used to identify database for the suite -->
+<!-- you may define here also `domain` parameter that enables to shorten url's `href` parameter, -->
+<!--     if `domain` parameter is defined all `href` values in urls will be treated as relative to the `domain` parameter -->
+<suite name="exercise1" company="testwarez2016" project="workshops">
+  <!-- this test is named `homepage` and it will be displayed under it name on the report, this name must be unique within suite -->
+  <!-- this page defines also using `proxy` server with `rest` mode - it is required by `status-codes` feature -->
+  <test name="homepage" useProxy="rest">
+        <!-- this is definition of a `collect` phase -->
+        <collect>
+            <open/> <!-- open page in browser -->
+            <wait-for-page-loaded/> <!-- wait until page DOM is rendered -->
+            <resolution width="1200" height="800"/> <!-- change view resolution to 1200x800 px -->
+            <sleep duration="1000"/> <!-- let the page to adjust to the new resolution, wait 1000 ms (1 second) -->
+            <screen name="desktop"/> <!-- take page screenshot, name it `desktop` -->
+            <js-errors/> <!-- collect page js errors -->
+            <source/> <!-- collect page sources -->
+            <status-codes/> <!-- collect page status codes -->
+            <accessibility/> <!-- collect page accessibility information -->
+        </collect>
+        <!-- this is definition of a `compare` phase -->
+        <compare>
+            <screen comparator="layout"/> <!-- compare all collected screenshots with pattern using `layout` comparator -->
+            <js-errors> <!-- check for all collected js errors and decide if they are expected or not -->
+              <js-errors-filter source="http://application-domain/assets/bootstrap.min.js"/> <!-- this filter excludes arr errors that occured in `bootstrap.min.js` script -->
+            </js-errors>
+            <source/> <!-- compare page source with pattern -->
+            <source comparator="w3c-html5"> <!-- check source w3c compliance -->
+                <w3c-filter line="59"/> <!-- don't show w3c error that occured in line 59 -->
+            </source>
+            <status-codes filterRange="400,500"  showExcluded="true"> <!-- check for all status codes within range 400 to 500 -->
+              <exclude pattern="^.*css$"/>  <!-- thanks to exclude filter, we can define that status codes of assets with `.css` extension we don't care -->
+              <exclude pattern="^.*js$"/>  <!-- the same for assets with `.js` extension, all of them will be ignored and not reported as an error -->
+            </status-codes>
+            <accessibility> <!-- prepare accessibility report -->
+              <accessibility-filter error="Img element missing an alt attribute. Use the alt attribute to specify a short text alternative." />
+              <!-- ignore error with defined content -->
+            </accessibility>
+        </compare>
+        <!-- inside `urls` tag a list of urls that will be tested with rules defined above (in `collect` and `compare` phases) -->
+        <urls>
+            <url href="/index.html"/>
+        </urls>
+    </test>
+</suite>
