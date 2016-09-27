@@ -12,7 +12,7 @@
 ### 1. Please make sure that you have following software on your local machine (versions are very important):
    * [VirtualBox 5.0.26](https://www.virtualbox.org/wiki/Download_Old_Builds_5_0)
       * To check version, open VirtualBox installed on your computer. Navigate to `Help` and `About VirtualBox...`, the version of installed software should be visible at the bottom of a popup.
-   * [Vagrant 1.8.4](https://www.vagrantup.com/downloads.html)
+   * [Vagrant 1.8.4](https://releases.hashicorp.com/vagrant/1.8.4/)
       * To check version, open command console and execute `vagrant -v`.
    * [ChefDK 0.17.17](https://downloads.chef.io/chef-dk/)
       * To check version, open command console and execute `chef -v`. After `Chef Development Kit Version` version of ChefDK should be displayed.
