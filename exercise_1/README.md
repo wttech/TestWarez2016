@@ -137,3 +137,7 @@ Since we can't do anything to fix it, lets filter it out from our test's results
 Use `error` attribute of a filter and paste there description of an error (bolded text form the report): `Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.`.
 
 [Run suite](#running-suite) and check your report.
+
+------
+
+To learn more about available collectors - [visit our Wiki](https://github.com/Cognifide/aet/wiki/Collectors).
