@@ -22,8 +22,6 @@
       * To check version, open command console and execute `java -version`.
    * [Chrome browser](https://www.google.com/chrome/browser/desktop/)
 
-TODO - how to check?
-
 ### 2. Download AET Vagrant
 Please navigate to [AET GitHub Repository](https://github.com/Cognifide/aet) and download or clone it using Git.
 
