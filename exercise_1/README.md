@@ -16,10 +16,10 @@ Please see `exercise1-explained.xml` for detailed explanation of suite XML file 
 ## Running suite
 In order to run suite on your local Vagrant machine, run following command in this directory:
 
-`mvn aet:run -DtestSuite=exercise1.xml -Ddomain=DOMAIN_WHERE_EXERCISE_PAGE_IS_HOSTED`
+`mvn aet:run -DtestSuite=exercise1.xml -Ddomain=http://zg.cognifide.com/aet/testWarez2016`
 
-This action will execute `exercise1` suite. 
-Please remember about changing `DOMAIN_WHERE_EXERCISE_PAGE_IS_HOSTED` to the real domain where the exercise page is hosted.
+This action will execute `exercise1` suite.
+
 If you want to run suite now, please use `exercise1-explained.xml` - suite definition in `exercise1.xml` is not ready to perform test before starting exercises.
 You can learn more about running suite in [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite) and [Workshop description](https://github.com/Skejven/aet-workshop#running-suite).
 
