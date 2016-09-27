@@ -9,17 +9,17 @@
 
 ## AET setup
 
-### 1. Please make sure that you have following software on your local machine (versions are very important):
+### 1. Please make sure that you have the following software installed on your local machine (versions are very important):
    * [VirtualBox 5.0.26](https://www.virtualbox.org/wiki/Download_Old_Builds_5_0)
-      * To check version, open VirtualBox installed on your computer. Navigate to `Help` and `About VirtualBox...`, the version of installed software should be visible at the bottom of a popup.
+      * To check its version, open VirtualBox installed on your computer. Navigate to `Help` and `About VirtualBox...`, the version of the installed software should be visible at the bottom of the popup.
    * [Vagrant 1.8.4](https://releases.hashicorp.com/vagrant/1.8.4/)
-      * To check version, open command console and execute `vagrant -v`.
+      * To check its version, open the command line console and execute `vagrant -v`.
    * [ChefDK 0.17.17](https://downloads.chef.io/chef-dk/)
-      * To check version, open command console and execute `chef -v`. After `Chef Development Kit Version` version of ChefDK should be displayed.
+      * To check its version, open the command console and execute `chef -v`. After `Chef Development Kit Version` the version of ChefDK should be displayed.
    * [Maven](https://maven.apache.org/download.cgi) (at least version 3.0.4)
-      * To check version, open command console and execute `mvn -v`. Please make also sure, that `Java home` and `Maven home` properties are set.
+      * To check its version, open the command console and execute `mvn -v`. Please make also sure, that `Java home` and `Maven home` properties are set.
    * [JDK 7 or 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-      * To check version, open command console and execute `java -version`.
+      * To check its version, open the command console and execute `java -version`.
    * [Chrome browser](https://www.google.com/chrome/browser/desktop/)
 
 ### 2. Download AET Vagrant
@@ -27,21 +27,21 @@ Please navigate to [AET GitHub Repository](https://github.com/Cognifide/aet) and
 
 ![Get vagrant](assets/get-vagrant.png)
 
-   * to download repo, simply click `Download ZIP` and unpack to your workspace directory,
-   * to clone repository use your favourite Git client with repository address `https://github.com/Cognifide/aet.git` (or `git@github.com:Cognifide/aet.git` if you have GitHub account).
+   * to download the repo, simply click `Download ZIP` and unpack it to your workspace directory,
+   * to clone the repository use your favourite Git client with the following repository address `https://github.com/Cognifide/aet.git` (or `git@github.com:Cognifide/aet.git` if you have a GitHub account).
 
 ### 3. Start AET Vagrant machine
-Please navigate to your local AET repository to `vagrant` directory.
-Open command prompt as an administrator and execute the following commands:
+Please navigate to the `vagrant` directory in your local AET repository.
+Open the command prompt as the Administrator and execute the following commands:
 
    * `vagrant plugin install vagrant-omnibus`
    * `vagrant plugin install vagrant-berkshelf`
    * `vagrant plugin install vagrant-hostmanager`
 
-Run `berks install` and then `vagrant up` to start virtual machine. This process may take a few minutes.
+Run `berks install` and then `vagrant up` to start a virtual machine. This process may take a few minutes.
 
 ### 4. Check your machine
-Enter [http://aet-vagrant:8181/system/console](http://aet-vagrant:8181/system/console) to check setup status after vagrant finished AET setup.
+Enter [http://aet-vagrant:8181/system/console](http://aet-vagrant:8181/system/console) to check setup status after vagrant finishes AET setup.
 
 Console credentials are: 
 
@@ -52,8 +52,8 @@ You should see the information `Bundle information: 251 bundles in total - all 2
 
 #### Running suite
 
-Now you are ready to run your first suite to check if instance is running properly. To do it, create `aet-test` directory.
-Inside directory create two files `pom.xml` and `suite.xml` with content defined below:
+Now you are ready to run your first suite to check if the instance is running properly. To do it, create the `aet-test` directory.
+Inside the directory create two files `pom.xml` and `suite.xml` with the content defined below:
 
 **pom.xml**
 ```xml
@@ -112,14 +112,14 @@ Inside directory create two files `pom.xml` and `suite.xml` with content defined
 </suite>
 ```
 
-Run it performing maven command inside `aet-test` directory using command line:
+Run it executing the following maven command inside the `aet-test` directory using the command line:
 
 `mvn aet:run`
 
-This action will execute `check` suite. 
+This action will execute the `check` suite. 
 You can learn more about running suites in [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite).
 
-While running a suite you should see its progress in the console. It looks like this:
+While running the suite you should see its progress in the console. It may look as follows:
 
 ```
 [INFO] ********************************************************************************
@@ -130,7 +130,7 @@ While running a suite you should see its progress in the console. It looks like 
 [INFO] [16:13:30.447]: COLLECTED: [success: 1, total: 1] ::: COMPARED: [success: 1, total: 1]
 ```
 
-After suite processing by AET is finished you should see following information with url to the report:
+After suite processing is finished you should see the following information with a url to the report:
 
 ```
 [INFO] Received report message: FinishedSuiteProcessingMessage{correlationId=cognifide-workshops-check-1474577335419, status=OK, errors=[]}
@@ -145,20 +145,20 @@ After suite processing by AET is finished you should see following information w
 [INFO] ------------------------------------------------------------------------
 ```
 
-After you navigate to report url: 
+After you navigate to the report url: 
 `http://aet-vagrant/report.html?company=cognifide&project=workshops&correlationId=cognifide-workshops-check-1474577335419`
-you will see the report. Another way to open the report is to open `redirect.html` from `target` directory file that is the result of a Maven build. 
-It will redirect browser to report web application. 
+you will see the report. Another way to open the report is to open `redirect.html` from the `target` directory file that is the result of a Maven build. 
+It will redirect the browser to the report web application. 
 
-If you can see the report with a screenshot captured means you are ready to start your AET adventure.
+If you can see the report with a screenshot captured it means you are ready to start your AET adventure.
 
 ## Exercises
 There are 3 simple exercises that will quickly introduce you to the AET World. 
 Order of performing exercises is not important, however we suggest starting with `exercise 1`.
-Before running each exercise suite check out `explained` version of suite which contains comments with suite details.
+Before running each exercise suite check out the `explained` version of the suite which contains comments with suite details.
 
 You will find each exercise description inside its directory.
 
 You will also find in this repository `pom-template.xml` and `suite-template.xml` that may be useful in the future to setup your own tests.
 
-Directory `exercise-page` contains sources of a page that is used in the workshop. You may simply run it using [Apache Server](https://httpd.apache.org/download.cgi).
+The directory `exercise-page` contains sources of the page that is used in the workshop. You may simply run it by using [Apache Server](https://httpd.apache.org/download.cgi).
