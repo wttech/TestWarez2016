@@ -23,6 +23,9 @@ This action will execute `exercise1` suite.
 If you want to run suite now, please use `exercise1-explained.xml` - suite definition in `exercise1.xml` is not ready to perform test before starting exercises.
 You can learn more about running suite in [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite) and [Workshop description](https://github.com/Skejven/aet-workshop#running-suite).
 
+Please notice, that parameter `domain` can be also defined in suite XML file (see `exercise1-explained.xml` for detailed explanation).
+When domain is specified in XML, you may run aet AET without `-Ddomain=http://zg.cognifide.com/aet/testWarez2016` parameter (if you do, it will override one defined in suite).  
+
 ## Exercise
 In this exercise you will be modifying `exercise1.xml` suite to prepare full test of `index.html` page step by step.
 
