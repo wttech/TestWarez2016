@@ -114,7 +114,7 @@ Inside the directory create two files `pom.xml` and `suite.xml` with the content
 
 Run it executing the following maven command inside the `aet-test` directory using the command line:
 
-`mvn aet:run -DendpointDomain=http://139.59.210.108:8181`
+`mvn aet:run`
 
 This action will execute the `check` suite. 
 You can learn more about running suites in [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite).

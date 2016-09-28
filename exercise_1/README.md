@@ -16,7 +16,7 @@ Please see `exercise1-explained.xml` for a detailed explanation of a structure o
 ## Running suite
 In order to run the suite on your local Vagrant machine, run the following command in this directory:
 
-`mvn aet:run -DtestSuite=exercise1.xml -Ddomain=http://zg.cognifide.com/aet/testWarez2016 -DendpointDomain=http://139.59.210.108:8181`
+`mvn aet:run -DtestSuite=exercise1.xml -Ddomain=http://zg.cognifide.com/aet/testWarez2016`
 
 This action will execute the `exercise1` suite.
 
