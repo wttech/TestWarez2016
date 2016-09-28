@@ -93,7 +93,7 @@ Inside the directory create two files `pom.xml` and `suite.xml` with the content
 **suite.xml**
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="check" company="cognifide" project="workshops">
+<suite name="YOUR_INITIALS_HERE_LOWERCASE" company="YOUR_COMPANY_NAME_HERE_LOWERCASE" project="workshops">
     <test name="my-first-test">
         <collect>
             <open/>
@@ -114,7 +114,7 @@ Inside the directory create two files `pom.xml` and `suite.xml` with the content
 
 Run it executing the following maven command inside the `aet-test` directory using the command line:
 
-`mvn aet:run`
+`mvn aet:run -DendpointDomain=http://139.59.210.108:8181`
 
 This action will execute the `check` suite. 
 You can learn more about running suites in [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite).
