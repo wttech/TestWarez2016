@@ -1,13 +1,13 @@
-![Cognifide logo](http://cognifide.github.io/images/cognifide-logo.png)
+![WTT logo](../assets/wtt-logo.png)
 
 # Automated Exploratory Testing Workshop - Exercise 2
 
 In this exercise you will learn about managing dynamic components on websites using:
 
-* [Hide Modifier](https://github.com/Cognifide/aet/wiki/HideModifier),
-* [Resolution Modifier](https://github.com/Cognifide/aet/wiki/ResolutionModifier),
-* [Sleep Modifier](https://github.com/Cognifide/aet/wiki/SleepModifier),
-* and [Wait For Page Loaded Modifier](https://github.com/Cognifide/aet/wiki/WaitForPageLoadedModifier).
+* [Hide Modifier](https://github.com/wttech/aet/wiki/HideModifier),
+* [Resolution Modifier](https://github.com/wttech/aet/wiki/ResolutionModifier),
+* [Sleep Modifier](https://github.com/wttech/aet/wiki/SleepModifier),
+* and [Wait For Page Loaded Modifier](https://github.com/wttech/aet/wiki/WaitForPageLoadedModifier).
 
 Please see `exercise2-explained.xml` for a detailed explanation of the structure of the suite XML file.
 
@@ -17,7 +17,7 @@ In order to run the suite on your local Vagrant machine, run the following comma
 `mvn aet:run -DtestSuite=exercise2.xml -Ddomain=http://zg.cognifide.com/aet/testWarez2016`
 
 This action will execute the `exercise2` suite.
-You can learn more about running the suite at [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite) and [Workshop description](https://github.com/Skejven/aet-workshop#running-suite).
+You can learn more about running the suite at [AET wiki](https://github.com/wttech/aet/wiki/RunningSuite) and [Workshop description](https://github.com/Skejven/aet-workshop#running-suite).
 
 Please notice, that the parameter `domain` can also be defined in the suite XML file (see `exercise1-explained.xml` for a detailed explanation).
 When the domain is specified in XML, you may run AET with no `-Ddomain=http://zg.cognifide.com/aet/testWarez2016` parameter (if you do so, it will override the one defined in the suite).  
@@ -34,8 +34,8 @@ Update the `hide-dynamic-elements` test from `exercise2.xml` to obtain a stable 
 * tweets feed.
 
 Perform the following steps:
-   * [hide](https://github.com/Cognifide/aet/wiki/HideModifier) the moving advertisement using the `xpath` parameter - it can be obtained e.g. by inspecting the element and copying its xpath in Chrome,
-   * [hide](https://github.com/Cognifide/aet/wiki/HideModifier) the tweets feed using the `xpath` parameter.
+   * [hide](https://github.com/wttech/aet/wiki/HideModifier) the moving advertisement using the `xpath` parameter - it can be obtained e.g. by inspecting the element and copying its xpath in Chrome,
+   * [hide](https://github.com/wttech/aet/wiki/HideModifier) the tweets feed using the `xpath` parameter.
 
 [Run suite](#running-suite) and check your report.
 
@@ -51,11 +51,11 @@ Update the `hide-dynamic-elements` test from `exercise2.xml` to collect and comp
 * 320 x 568 px for `mobile` screen size simulation.
 
 Perform the following steps:
-   * modify the view [resolution](https://github.com/Cognifide/aet/wiki/ResolutionModifier) after existing `desktop` screenshot capture, set it to 768 x 1024,
-   * it is a good practice to let the page adjust to a new resolution before capturing a screenshot, wait 1000 ms (1 second) using [sleep modifier](https://github.com/Cognifide/aet/wiki/SleepModifier),
-   * add [screen collector](https://github.com/Cognifide/aet/wiki/ScreenCollector) to capture a page screenshot and name it `tablet`,
+   * modify the view [resolution](https://github.com/wttech/aet/wiki/ResolutionModifier) after existing `desktop` screenshot capture, set it to 768 x 1024,
+   * it is a good practice to let the page adjust to a new resolution before capturing a screenshot, wait 1000 ms (1 second) using [sleep modifier](https://github.com/wttech/aet/wiki/SleepModifier),
+   * add [screen collector](https://github.com/wttech/aet/wiki/ScreenCollector) to capture a page screenshot and name it `tablet`,
    * perform similar steps for the `mobile` resolution,
-   * notice you don't need to call [layout comparator](https://github.com/Cognifide/aet/wiki/LayoutComparator) separately for each captured screenshot - the one existing will take all the collected screenshots.
+   * notice you don't need to call [layout comparator](https://github.com/wttech/aet/wiki/LayoutComparator) separately for each captured screenshot - the one existing will take all the collected screenshots.
    
 [Run suite](#running-suite) and check your report.
 
@@ -67,6 +67,6 @@ Update the `wait-for-dynamic-element` test from `exercise2.xml` to wait for an a
 The page `/contact.html` contains the resource that needs at least 5 seconds to load. The test should wait for it before taking a screenshot.
 
 Perform the following steps:
-   * use [Sleep Modifier](https://github.com/Cognifide/aet/wiki/SleepModifier) to wait 6 seconds (6000 ms) before running screen collection.
+   * use [Sleep Modifier](https://github.com/wttech/aet/wiki/SleepModifier) to wait 6 seconds (6000 ms) before running screen collection.
    
 [Run suite](#running-suite) and check your report.

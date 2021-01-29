@@ -15,7 +15,7 @@
             <url href="https://www.google.pl/"/>
             <url href="http://www.bbc.co.uk/"/>
             <url href="https://www.yahoo.com/"/>
-            <url href="https://github.com/Cognifide/aet"/>
+            <url href="https://github.com/wttech/aet"/>
         </urls>
     </test>
     <test name="my-second-test">
@@ -32,7 +32,7 @@
             <url href="https://www.google.pl/"/>
             <url href="http://www.bbc.co.uk/"/>
             <url href="https://www.yahoo.com/"/>
-            <url href="https://github.com/Cognifide/aet"/>
+            <url href="https://github.com/wttech/aet"/>
         </urls>
     </test>
 </suite>
