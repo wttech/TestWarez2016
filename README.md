@@ -1,8 +1,8 @@
-![Cognifide logo](https://assets.cognifide.com/github/cognifide-logo.png)
+![WTT logo](assets/wtt-logo.png)
 
 # Automated Exploratory Testing Workshop
 <p align="center">
-  <a href="https://github.com/Cognifide/aet" target="_blank">
+  <a href="https://github.com/wttech/aet" target="_blank">
     <img src="assets/aet-logo-black.png" alt="AET Logo"/>
   </a>
 </p>
@@ -23,12 +23,12 @@
    * [Chrome browser](https://www.google.com/chrome/browser/desktop/)
 
 ### 2. Download AET Vagrant
-Please navigate to [AET GitHub Repository](https://github.com/Cognifide/aet) and download or clone it using Git.
+Please navigate to [AET GitHub Repository](https://github.com/wttech/aet) and download or clone it using Git.
 
 ![Get vagrant](assets/get-vagrant.png)
 
    * to download the repo, simply click `Download ZIP` and unpack it to your workspace directory,
-   * to clone the repository use your favourite Git client with the following repository address `https://github.com/Cognifide/aet.git` (or `git@github.com:Cognifide/aet.git` if you have a GitHub account).
+   * to clone the repository use your favourite Git client with the following repository address `https://github.com/wttech/aet.git` (or `git@github.com:wttech/aet.git` if you have a GitHub account).
 
 ### 3. Start AET Vagrant machine
 Please navigate to the `vagrant` directory in your local AET repository.
@@ -117,7 +117,7 @@ Run it executing the following maven command inside the `aet-test` directory usi
 `mvn aet:run`
 
 This action will execute the `check` suite. 
-You can learn more about running suites in [AET wiki](https://github.com/Cognifide/aet/wiki/RunningSuite).
+You can learn more about running suites in [AET wiki](https://github.com/wttech/aet/wiki/RunningSuite).
 
 While running the suite you should see its progress in the console. It may look as follows:
 
